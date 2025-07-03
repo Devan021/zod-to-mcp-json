@@ -1,0 +1,36 @@
+{
+  "name": "zod-to-mcp-json",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format esm,cjs",
+    "test": "ts-node src/test.ts",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "zod",
+    "json",
+    "converter",
+    "schema",
+    "MCP"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/node": "^24.0.10",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "zod": "^3.25.71"
+  }
+}
